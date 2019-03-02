@@ -9,6 +9,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".NodeDetailActivity"
+                  android:parentActivityName=".NoteListActivity"
+                  android:windowSoftInputMode="adjustResize">
+                    <!--on définit le parent de NodeDetailsActivity pour la fleche de retour-->
+                    <!-- on précise que notre activity doit être redimensionné de manière à ne pas cacher les éléments,lors de
+                    l'édition d'une note-->
+
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NoteListActivity"/>
+
+        </activity>
         <activity android:name=".NoteListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
